@@ -1,10 +1,10 @@
-# 🧠 LoRA Fine-Tuning with DistilBERT for Sentiment Classification
+#  LoRA Fine-Tuning with DistilBERT for Sentiment Classification
 
 This project demonstrates a **parameter-efficient fine-tuning approach (LoRA)** on a lightweight transformer (`distilbert-base-uncased`) to perform **binary sentiment classification** on a text dataset. By injecting low-rank adapters into selective layers of the model, we drastically reduce the number of trainable parameters — enabling faster, cheaper, and memory-efficient fine-tuning without compromising performance.
 
 ---
 
-## 🎯 Project Objective
+##  Project Objective
 
 - Fine-tune `DistilBERT` using **LoRA (Low-Rank Adaptation)** on a small text dataset.
 - Apply sentiment classification: **Positive (1)** or **Negative (0)**.
@@ -13,7 +13,7 @@ This project demonstrates a **parameter-efficient fine-tuning approach (LoRA)** 
 
 ---
 
-## 📁 Dataset Overview
+##  Dataset Overview
 
 - Format: `.csv` file with two columns — `text` (review string) and `label` (0 or 1).
 - Size: ~2,000 samples
@@ -23,7 +23,7 @@ This project demonstrates a **parameter-efficient fine-tuning approach (LoRA)** 
 
 ---
 
-## 🧠 Model & Architecture
+##  Model & Architecture
 
 | Component           | Description                          |
 |---------------------|--------------------------------------|
@@ -36,18 +36,18 @@ This project demonstrates a **parameter-efficient fine-tuning approach (LoRA)** 
 
 ---
 
-## 🧬 What is LoRA?
+##  What is LoRA?
 
 LoRA (Low-Rank Adaptation) modifies only small low-rank matrices injected into attention layers of transformers instead of updating full model weights.
 
-### 🚀 Why LoRA?
+###  Why LoRA?
 - Reduce training cost and memory.
 - Fine-tune with limited data and resources.
 - Retain generalization of the original model.
 
 ---
 
-## ⚙️ LoRA Configuration
+##  LoRA Configuration
 
 Only certain submodules are modified with LoRA. Configuration:
 
